@@ -48,9 +48,6 @@ for k in range(n_iterations):
     x_next = find__x_next(x_current, grad_at__x_current)
     loss_next = loss(x_next)
     
-    if loss_next < 0.5:
-        print("Problem 2")
-    
     ### Check if the algorithm converges
     if np.abs( loss_current - loss_next ) < epsilon:
         count_break += 1
